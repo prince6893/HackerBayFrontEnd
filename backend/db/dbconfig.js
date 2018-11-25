@@ -6,19 +6,11 @@ else
 {
   dbUrl = 'postgres://hackerbay:root@localhost:5432/hackerbay';
 }
-const sequelize = new Sequelize(dbUrl,{
+const sequelize = new Sequelize('Hackerbay', 'postgres', 'postgres', {
   host: 'localhost',
   dialect: 'postgres',
-  logging: true,
-  operatorsAliases: false,
-  pool:{
-    max: 5,
-    min: 0,
-    acquire: 30000,
-    idle: 10000
-  }
-
 });
+
 module.exports = sequelize;
 /*
 const Sequelize = require('sequelize');
